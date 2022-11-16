@@ -21,7 +21,8 @@ public class Hospital {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idHospital;
 	private String nombre;
-	private String direccion;
+	private String descripcion;
+	private String distrito;
 	
 	@ManyToMany
 	@JoinTable(name="cliente_hospital",
@@ -42,13 +43,18 @@ public class Hospital {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getDireccion() {
-		return direccion;
+	public String getDescripcion() {
+		return descripcion;
 	}
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
-	
-	
+	public String getDistrito() {
+		return distrito;
+	}
+	public void setDistrito(String distrito) {
+		this.distrito = distrito;
+	}
+		
 	
 }
