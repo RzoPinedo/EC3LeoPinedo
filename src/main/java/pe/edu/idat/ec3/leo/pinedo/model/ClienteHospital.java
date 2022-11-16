@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cliente_producto")
+@Table(name="cliente_hospital")
 public class ClienteHospital {
 	
 	@Id
@@ -28,8 +28,8 @@ class ClienteProductoFk implements Serializable{
 	@Column(name = "id_cliente", nullable = false, unique = true)
 	private Integer idCliente;
 	
-	@Column(name = "id_producto", nullable = false, unique = true)
-	private Integer idProducto;
+	@Column(name = "id_hospital", nullable = false, unique = true)
+	private Integer idHospital;
 
 	public Integer getIdCliente() {
 		return idCliente;
@@ -39,12 +39,12 @@ class ClienteProductoFk implements Serializable{
 		this.idCliente = idCliente;
 	}
 
-	public Integer getIdProducto() {
-		return idProducto;
+	public Integer getIdHospital() {
+		return idHospital;
 	}
 
-	public void setIdProducto(Integer idProducto) {
-		this.idProducto = idProducto;
+	public void setIdHospital(Integer idHospital) {
+		this.idHospital = idHospital;
 	}
 	
 }
